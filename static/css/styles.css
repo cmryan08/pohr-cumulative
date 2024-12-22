@@ -1,0 +1,64 @@
+/* styles.css */
+
+.animated-underline {
+  position: relative;
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.animated-underline::after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0; /* Start with no line */
+  height: 6px;
+  background-color: red;
+  z-index: -1;
+  border-radius: 4px;
+  transform-origin: left center;
+  transition: width 0.8s ease-out; /* Smooth width transition */
+}
+
+.animated-underline.animate::after {
+  width: 100%; /* Fully extend the line */
+}
+
+.text-dark-red {
+    color: #aa0000;
+}
+
+.bg-dark-red {
+    background-color: #aa0000;
+}
+
+/* Buttons */
+
+.custom-btn {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  padding: 10px 15px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover,
+.custom-btn:focus,
+.custom-btn.active {
+  background-color: lightgray;
+  color: #aa0000;
+  outline: none;
+  cursor: pointer;
+}
+
+.hidden-card {
+  display: none;
+}
+
+.hidden-card.active {
+  display: block;
+}
+
